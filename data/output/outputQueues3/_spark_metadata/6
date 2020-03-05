@@ -1,0 +1,3 @@
+v1
+{"path":"file:///C:/Users/robin/Documents/Aubay/Formation/Kafka/UntiNots_technical_test/data/output/outputQueues3/part-00000-b4e95447-dc3e-40d1-bdd5-85d4c5748ba4-c000.snappy.parquet","size":750,"isDir":false,"modificationTime":1583413507403,"blockReplication":1,"blockSize":33554432,"action":"add"}
+{"path":"file:///C:/Users/robin/Documents/Aubay/Formation/Kafka/UntiNots_technical_test/data/output/outputQueues3/part-00001-9332abe6-e5d1-417a-b10c-d3c2d5211598-c000.snappy.parquet","size":1559,"isDir":false,"modificationTime":1583413507421,"blockReplication":1,"blockSize":33554432,"action":"add"}
