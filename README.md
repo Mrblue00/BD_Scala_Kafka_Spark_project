@@ -59,7 +59,7 @@ I need to write 4 Scripts with the objectives below :
 	presence in a topic not belonging to the topic / rate of absence in a topic that belonged to
 	the topic
 
-##Environnement
+## Environnement
 
 For Processing datas i'am using a corpus of text files findable at src : http://corpus.canterbury.ac.nz/descriptions/#cantrbry
 
@@ -70,7 +70,6 @@ For Processing datas i'am using a corpus of text files findable at src : http://
 
 For testing this project you need to have a kafka instance localy to launch Kafka Server and Zookeeper server.
 
-1
 Create Three topic with Kafka for each Queue :
 
 	• kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 2 --topic Queue1
@@ -88,7 +87,7 @@ Run one per one these scripts.
 
 I'am using IntelliJ Community as IDE and sbt for managing my dependencies.
 
-##Explaination
+## Explaination
 
 I have tested each step with Producer and/or Consummer on the Kafka console for checking if datas were correctly process throught Kafka.
 
@@ -103,21 +102,32 @@ For the second script ConsumerData.scala i used :
 	• kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic Queue3 --from-beginning
 	• kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic Queue2 --from-beginning
 	
-##Difficulty
+## Difficulty
 
 I spend a lot of time on looking at documentation of Kafka and Spark.
 I lost half a day on configuration errors.
 
+i have some difficulties to understand the concept of task serializable with spark streaming on the second script.
 Error : org.apache.spark.SparkException: Task not serializable
 
+
+
+
+	
+## TODO
+	•
+Overall : 
 
 ProducerDataBatch.scala : delete blank word
 
 ConsumerData.scala : solve the exception not serializable
 
-##Sources used
+## Sources used
 
-•https://blog.engineering.publicissapient.fr/2017/09/27/spark-comprendre-et-corriger-lexception-task-not-serializable/
-•https://kafka.apache.org/documentation/
-•https://spark.apache.org/docs/latest/streaming-programming-guide.html
+	•https://blog.engineering.publicissapient.fr/2017/09/27/spark-comprendre-et-corriger-lexception-task-not-serializable/
+	•https://kafka.apache.org/documentation/
+	•https://spark.apache.org/docs/latest/streaming-programming-guide.html
+	.
+
+
 
