@@ -7,6 +7,7 @@ object DataAnalysis extends  App {
 
   Logger.getLogger("org").setLevel(Level.ERROR)
   // spark configuration
+  // TODO do DataAnalysis
   val spark = SparkSession.builder()
     .appName("SavingQueues")
     .master("local[*]")
