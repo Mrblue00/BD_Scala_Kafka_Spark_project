@@ -23,7 +23,7 @@ object ProducerDataBatch extends App {
     val producer = new KafkaProducer[String, String](props)
 
     // get files from directory "data"
-    val pathDirectory = "./data/filesTest"
+    val pathDirectory = "./data/filesProducer"
     val files = getListFile(pathDirectory)
 
     // For each file we split text in words and send them in Producer queue

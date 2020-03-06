@@ -54,7 +54,9 @@ object ConsumerData extends App {
     addKeywords("Name", "Gutenberg")
 
     addKeywords("Job", "Journalist")
-
+    addKeywords("Job", "Analyst")
+    addKeywords("Job", "musician")
+    
     // set kafka parameters
     val kafkaParams = Map[String, Object](
       "bootstrap.servers" -> "localhost:9092",
