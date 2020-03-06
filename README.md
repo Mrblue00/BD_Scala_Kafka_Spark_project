@@ -77,7 +77,7 @@ Run one per one these scripts.
 
 I'am using IntelliJ Community as IDE and sbt for managing my dependencies.
 
-## Explaination
+## Explanation
 
 I have tested each step with Producer and/or Consummer on the Kafka console for checking if datas were correctly process throught Kafka.
 
@@ -94,6 +94,9 @@ For the second script ConsumerData.scala i used :
 	• kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic Queue3 --from-beginning
 	
 The main goal of the second script is to get the datas of the Queu1 and put conditions to match with keywords Arrays and send it to Queue2 or Queue3.
+
+I have some difficulties to iterate in the Rdd of the stream to retrieve datas from it.
+
 
 For the third script SavingQueues.scala i used :
 
