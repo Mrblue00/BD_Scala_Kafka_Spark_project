@@ -85,7 +85,7 @@ For the ProducerDataBatch.scala i used :
 
 	• kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic Queue1 --from-beginning
 
-For each files of the directory "./data/filesProducer" we iterate on it for each word and send it to KafkaProducer..
+For each files of the directory "./data/filesProducer" we iterate on it for each word and send it to KafkaProducer.
 it returns me the source of the files process and the word associated with it ("source","word").
 
 For the second script ConsumerData.scala i used :
@@ -93,8 +93,15 @@ For the second script ConsumerData.scala i used :
 	• kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic Queue2 --from-beginning
 	• kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic Queue3 --from-beginning
 	
+The main goal of the second script is to get the datas of the Queu1 and put conditions to match with keywords Arrays and send it to Queue2 or Queue3.
+
+For the third script SavingQueues.scala i used :
+
+	• kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic Queue2 --from-beginning
+	• kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic Queue3 --from-beginning
 	
-For the second script SavingQueues.scala i used :
+Retrieve Queue2 and Queue3, load  to DataFrame and tranform their to parquet file in the following path -> 
+"./data/output/"
 	
 ## Difficulty
 
@@ -103,26 +110,32 @@ I lost half a day to manage errors configurations and dependancies.
 
 i have some difficulties to understand the concept of task serializable with spark streaming on the second script.
 Error : org.apache.spark.SparkException: Task not serializable.
-
 	
 ## TODO
 	
 Overall : 
+	
 	•refactor the code
+	•create tests classes
+	
 
 ProducerDataBatch.scala :
+	
 	•delete blank word
 
 ConsumerData.scala :
+	
 	•solve the exception not serializable -> retrieve the datas
 	•send datas with format
 	
 SavingQueues.scala :
+	
 	•solve the exception not serializable -> retrieve the datas
 	•send datas with format
 	
 DataAnalysis.scala
 
+	•retrieves and analyse datas.
 
 ## Sources used
 
