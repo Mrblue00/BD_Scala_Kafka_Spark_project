@@ -1,19 +1,9 @@
 
 # UntieNots_technical_test
 
-Technical Projet using big Datas technologies such as Spark/ Spark Streaming/ Kafka.
-
-For using this project you need to have a kafka instance to launch Kafka Server and Zookeeper server.
-	
-We need to create Three topics for each Queue :
-
-	• kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 2 --topic Queue1
-	• kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 2 --topic Queue2
-	• kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 2 --topic Queue3
-
 This projet focus on the technologies of Big Data and most particulary the technologies of Kafka, Spark, Spark Streaming.
 
-##objectives
+## objectives
 
 I need to write 4 Scripts with the objectives below :
 
@@ -93,34 +83,46 @@ I have tested each step with Producer and/or Consummer on the Kafka console for 
 
 For the ProducerDataBatch.scala i used :
 
-	• kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic Queue1 --from-beginning*
-	
-it returns me the source of the files process and the word associated with it ("source","word")
+	• kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic Queue1 --from-beginning
+
+For each files of the directory "./data/filesProducer" we iterate on it for each word and send it to KafkaProducer..
+it returns me the source of the files process and the word associated with it ("source","word").
 
 For the second script ConsumerData.scala i used :
 
-	• kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic Queue3 --from-beginning
 	• kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic Queue2 --from-beginning
+	• kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic Queue3 --from-beginning
+	
+	
+For the second script SavingQueues.scala i used :
 	
 ## Difficulty
 
 I spend a lot of time on looking at documentation of Kafka and Spark.
-I lost half a day on configuration errors.
+I lost half a day to manage errors configurations and dependancies.
 
 i have some difficulties to understand the concept of task serializable with spark streaming on the second script.
-Error : org.apache.spark.SparkException: Task not serializable
-
-
-
+Error : org.apache.spark.SparkException: Task not serializable.
 
 	
 ## TODO
-	•
+	
 Overall : 
+	•refactor the code
 
-ProducerDataBatch.scala : delete blank word
+ProducerDataBatch.scala :
+	•delete blank word
 
-ConsumerData.scala : solve the exception not serializable
+ConsumerData.scala :
+	•solve the exception not serializable -> retrieve the datas
+	•send datas with format
+	
+SavingQueues.scala :
+	•solve the exception not serializable -> retrieve the datas
+	•send datas with format
+	
+DataAnalysis.scala
+
 
 ## Sources used
 
