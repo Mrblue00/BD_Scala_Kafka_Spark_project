@@ -1,5 +1,6 @@
 
-# UntieNots_technical_test
+# BD_Scala_Spark_project
+
 
 This projet focus on the technologies of Big Data and most particulary the technologies of Kafka, Spark, Spark Streaming.
 
